@@ -46,4 +46,9 @@ jobs:
               gh api \
                 --method POST \
                 -H "Accept: application/vnd.github+json" \
-                /repos/${GITHUB_REPOSITORY}/pulls
+                /repos/${GITHUB_REPOSITORY}/pulls \
+                -f title="$message" \
+              -f body="$message" \
+              -f head="$branch" \
+              -f base='main'
+          fi
