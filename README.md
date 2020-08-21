@@ -9,4 +9,4 @@ A simple set of dev container 'templates' to help get you up and running with a 
 </tr></table>
 
 
-A **development container** is a run
+A **development container** is a running [Docker](https://www.docker.com) container with a well-defined tool/runtime stack and its prerequisites. It allows you to use a container as a full-featured development environment which can be used to run an application, to separate tools, libraries, or runtimes needed for working with a codebase, and to aid in continu
