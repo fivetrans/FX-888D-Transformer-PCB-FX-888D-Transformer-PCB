@@ -23,4 +23,6 @@ This repository contains a set of **Dev Container Templates** which are source f
 
 ### Creating your own collection of templates
 
-The [Dev
+The [Dev Container Template specification](https://containers.dev/implementors/templates-distribution/#distribution) outlines a pattern for community members and organizations to self-author Templates in repositories they control.
+
+A starter repository [devcontainers/template-starter](https://github.com/
