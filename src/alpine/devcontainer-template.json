@@ -1,0 +1,6 @@
+{
+    "id": "alpine",
+    "version": "1.1.1",
+    "name": "Alpine",
+    "description": "Simple Alpine container with Git installed.",
+    "documentationURL": "https://github.com/devco

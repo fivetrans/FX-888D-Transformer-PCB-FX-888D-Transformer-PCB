@@ -39,4 +39,5 @@ This repository will accept improvement and bug fix contributions related to the
 Issues related to these templates can be reported in [an issue](https://github.com/devcontainers/templates/issues) in this repository.
 
 # License
-Copyright (c) Microsoft Corpora
+Copyright (c) Microsoft Corporation. All rights reserved. <br />
+Licensed under the MIT License. See [LICENSE](LICENSE).
