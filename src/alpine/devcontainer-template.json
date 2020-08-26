@@ -3,4 +3,11 @@
     "version": "1.1.1",
     "name": "Alpine",
     "description": "Simple Alpine container with Git installed.",
-    "documentationURL": "https://github.com/devco
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/alpine",
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Alpine version:",
+            "prop
