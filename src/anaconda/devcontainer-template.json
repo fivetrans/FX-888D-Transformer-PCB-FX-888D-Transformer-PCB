@@ -5,4 +5,9 @@
     "description": "Develop Anaconda applications in Python3. Installs dependencies from your environment.yml file and the Python extension.",
     "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/anaconda",
     "publisher": "Dev Container Spec Maintainers",
-    "licenseURL": "https:/
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "platforms": [
+        "Python",
+        "Anaconda"
+    ]
+}
