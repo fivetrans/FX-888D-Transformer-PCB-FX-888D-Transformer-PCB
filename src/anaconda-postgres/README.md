@@ -39,4 +39,4 @@ network_mode: service:[$SERVICE_NAME]
 
 ### Using Conda
 
-This dev container and its associated anaconda image includes [the `conda` package manager](https://aka.ms/
+This dev container and its associated anaconda image includes [the `conda` package manager](https://aka.ms/vscode-remote/conda/about). Additional packages installed using Conda will be downloaded from Anaconda or another repository if you configure one. To reconfigure Conda in this container to access an alternative repository, please see information on [configuring Conda channels here](https://aka.ms/vscode-remote/conda/channel-setup)
