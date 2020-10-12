@@ -70,4 +70,11 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env up
 
 Use this container to run Jupyter notebooks.
 
-1. Edit the `./.devcontainer/devcontainer.json` file 
+1. Edit the `./.devcontainer/devcontainer.json` file and add `8888` in the `forwardPorts` array:
+
+    ```json
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8888],
+    ```
+.
+1. Edit the `./.devcontainer/devcontainer.json` file and add a `postStartCommand` command to start the Jupyter notebook web app after the container is created. Us
