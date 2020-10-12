@@ -62,4 +62,12 @@ RUN conda install -y python=3.6
 For convenience, this template will automatically install dependencies from the `environment.yml` file in the parent folder when the container is built. You can change this behavior by altering this line in the `.devcontainer/Dockerfile`:
 
 ```Dockerfile
-RUN if [ -f "/
+RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
+    && rm -rf /tmp/conda-tmp
+```
+
+### Running Jupyter notebooks
+
+Use this container to run Jupyter notebooks.
+
+1. Edit the `./.devcontainer/devcontainer.json` file 
