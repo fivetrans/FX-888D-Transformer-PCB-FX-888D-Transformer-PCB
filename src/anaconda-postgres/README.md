@@ -54,4 +54,12 @@ conda install python=3.6
 Or in a Dockerfile:
 
 ```Dockerfile
-RUN conda install -y pytho
+RUN conda install -y python=3.6
+```
+
+#### [Optional] Adding the contents of environment.yml to the image
+
+For convenience, this template will automatically install dependencies from the `environment.yml` file in the parent folder when the container is built. You can change this behavior by altering this line in the `.devcontainer/Dockerfile`:
+
+```Dockerfile
+RUN if [ -f "/
