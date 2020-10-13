@@ -84,3 +84,12 @@ Use this container to run Jupyter notebooks.
 	"postStartCommand": "nohup bash -c 'jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root &'",
     ```
 
+1. View the terminal output to see the correct URL including the access token:
+
+    ```bash
+     http://127.0.0.1:8888/?token=1234567
+    ```
+
+1. Open the URL in a browser. You can edit and run code from the web browser.
+
+1. If you have the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=
