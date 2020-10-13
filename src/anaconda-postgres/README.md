@@ -77,4 +77,10 @@ Use this container to run Jupyter notebooks.
 	"forwardPorts": [8888],
     ```
 .
-1. Edit the `./.devcontainer/devcontainer.json` file and add a `postStartCommand` command to start the Jupyter notebook web app after the container is created. Us
+1. Edit the `./.devcontainer/devcontainer.json` file and add a `postStartCommand` command to start the Jupyter notebook web app after the container is created. Use nohup so it isn't killed when the command finishes. Logs will appear in `nohup.out`.
+
+    ```json
+	// Use 'postStartCommand' to run commands after the container is created.
+	"postStartCommand": "nohup bash -c 'jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root &'",
+    ```
+
