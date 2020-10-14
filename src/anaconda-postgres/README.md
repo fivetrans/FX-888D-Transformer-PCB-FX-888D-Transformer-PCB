@@ -92,4 +92,11 @@ Use this container to run Jupyter notebooks.
 
 1. Open the URL in a browser. You can edit and run code from the web browser.
 
-1. If you have the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=
+1. If you have the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) installed, you can also edit and run code from VS Code. 
+
+### Using the forwardPorts property
+
+By default, web frameworks and tools often only listen to localhost inside the container. As a result, we recommend using the `forwardPorts` property to make these ports available locally.
+
+```json
+"forwardPorts": [9000
