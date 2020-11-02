@@ -30,4 +30,8 @@ cd "${VCPKG_ROOT}"
 git pull --ff-only
 ```
 
-> Note: Please review the [Vcpkg license details](https://github.com/microsoft/vcpkg#license) to better understand its own license and additional license information pertaining to library packages and s
+> Note: Please review the [Vcpkg license details](https://github.com/microsoft/vcpkg#license) to better understand its own license and additional license information pertaining to library packages and supported ports.
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/src/cpp/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
