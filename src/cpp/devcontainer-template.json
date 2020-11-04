@@ -17,4 +17,12 @@
                 "ubuntu-20.04",
                 "ubuntu-18.04"
             ],
-      
+            "default": "debian-11"
+        },
+        "reinstallCmakeVersionFromSource": {
+            "type": "string",
+            "description": "Install CMake version different from what base image has already installed.",
+            "proposals": [
+                "none",
+                "3.21.5",
+        
