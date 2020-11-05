@@ -1,0 +1,12 @@
+version: '3.8'
+
+volumes:
+  mariadb-data:
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+   

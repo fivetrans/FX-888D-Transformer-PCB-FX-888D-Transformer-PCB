@@ -25,4 +25,12 @@
             "proposals": [
                 "none",
                 "3.21.5",
-        
+                "3.22.2"
+            ],
+            "default": "none"
+        }
+    },
+    "platforms": [
+        "C++"
+    ]
+}
