@@ -20,4 +20,14 @@ services:
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
     network_mode: service:db
 
-    # Use "forwardPorts" in **dev
+    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
+    # (Adding the "ports" property to this file will not forward from a Codespace.)
+
+  db:
+    image: mariadb:10.3.32-focal
+    restart: unless-stopped
+    volumes:
+      - mariadb-data:/var/lib/MARIADB
+    env_file:
+      - .env
+    # Add "forwardPorts": ["3306"] to **devconta
