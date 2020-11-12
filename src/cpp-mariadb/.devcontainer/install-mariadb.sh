@@ -21,3 +21,14 @@ find_os_props() {
             ;;
         ubuntu)
             case $VERSION_CODENAME in
+                bionic)
+                    OSTAG="1683439"
+                    OSURL="ubuntu-bionic-amd64"
+                    ;;
+                groovy)
+                    OSTAG="1683454"
+                    OSURL="ubuntu-groovy-amd64"
+                    ;;
+                *)
+                    OSTAG="1683444"
+                    OSURL="u
