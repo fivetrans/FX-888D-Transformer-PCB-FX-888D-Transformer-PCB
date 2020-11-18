@@ -31,4 +31,18 @@ find_os_props() {
                     ;;
                 *)
                     OSTAG="1683444"
-                    OSURL="u
+                    OSURL="ubuntu-focal-amd64"
+                    ;;
+            esac
+            ;;
+        *)
+            echo "Unsupported OS choice."
+            exit 1
+            ;;
+    esac
+}
+
+# Run apt-get if needed.
+apt_get_update_if_needed() {
+    if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
+        echo "Runn
