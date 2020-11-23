@@ -78,4 +78,12 @@ cleanup() {
 trap cleanup EXIT
 
 #Set up external repository and install C Connector
-check_pac
+check_packages libmariadb3 libmariadb-dev
+
+#Depending on the OS, install different C++ connectors
+find_os_props
+
+cd ${TMP_DIR}
+
+if [ "$(dpkg --print-architecture)" = "arm64" ] ; then
+    # Instructions are copied and modified from: https://github.com/mariadb-corporation/mariadb-connector-cpp/blob/master/BUIL
