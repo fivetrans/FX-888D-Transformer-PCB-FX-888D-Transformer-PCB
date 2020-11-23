@@ -57,4 +57,25 @@ check_packages() {
     if ! dpkg -s "$@" > /dev/null 2>&1; then
         apt_get_update_if_needed
         apt-get -y install --no-install-recommends "$@"
-    f
+    fi
+}
+
+TMP_DIR=$(mktemp -d -t maria-XXXXXXXXXX)
+MARIADB_CONNECTOR=""
+SOURCE_INCLUDE_DIR=""
+SOURCE_LIB_DIR=""
+SOURCE_PLUGIN_DIR=""
+
+cleanup() {
+    EXIT_CODE=$?
+    set +e
+    if [[ -n ${TMP_DIR} ]]; then
+        cd /
+        rm -rf ${TMP_DIR}
+    fi
+    exit $EXIT_CODE
+}
+trap cleanup EXIT
+
+#Set up external repository and install C Connector
+check_pac
