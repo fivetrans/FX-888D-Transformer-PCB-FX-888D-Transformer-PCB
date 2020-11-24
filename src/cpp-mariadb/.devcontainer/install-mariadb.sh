@@ -86,4 +86,9 @@ find_os_props
 cd ${TMP_DIR}
 
 if [ "$(dpkg --print-architecture)" = "arm64" ] ; then
-    # Instructions are copied and modified from: https://github.com/mariadb-corporation/mariadb-connector-cpp/blob/master/BUIL
+    # Instructions are copied and modified from: https://github.com/mariadb-corporation/mariadb-connector-cpp/blob/master/BUILD.md
+    # and from: https://mariadb.com/docs/clients/mariadb-connectors/connector-cpp/install/
+    check_packages git cmake make gcc libssl-dev
+    git clone https://github.com/MariaDB-Corporation/mariadb-connector-cpp.git
+    mkdir build && cd build
+    cmake ../mariadb-connector-cpp/ -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCONC_WI
