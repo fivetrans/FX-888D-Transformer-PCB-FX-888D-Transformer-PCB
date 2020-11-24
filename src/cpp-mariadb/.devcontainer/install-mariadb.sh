@@ -91,4 +91,12 @@ if [ "$(dpkg --print-architecture)" = "arm64" ] ; then
     check_packages git cmake make gcc libssl-dev
     git clone https://github.com/MariaDB-Corporation/mariadb-connector-cpp.git
     mkdir build && cd build
-    cmake ../mariadb-connector-cpp/ -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCONC_WI
+    cmake ../mariadb-connector-cpp/ -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCONC_WITH_UNIT_TESTS=Off -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_SSL=OPENSSL
+    cmake --build . --config RelWithDebInfo
+    make install
+
+    SOURCE_INCLUDE_DIR="../mariadb-connector-cpp/include"
+    SOURCE_LIB_DIR="."
+    SOURCE_PLUGIN_DIR="./libmariadb"
+else
+    # Instructions are copied and modified from: 
