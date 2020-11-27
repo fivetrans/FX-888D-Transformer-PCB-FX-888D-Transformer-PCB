@@ -99,4 +99,7 @@ if [ "$(dpkg --print-architecture)" = "arm64" ] ; then
     SOURCE_LIB_DIR="."
     SOURCE_PLUGIN_DIR="./libmariadb"
 else
-    # Instructions are copied and modified from: 
+    # Instructions are copied and modified from: https://mariadb.com/docs/clients/mariadb-connectors/connector-cpp/install/
+    MARIADB_CONNECTOR=mariadb-connector-cpp-1.0.1-$OSURL
+    curl -Ls https://dlm.mariadb.com/$OSTAG/connectors/cpp/connector-cpp-1.0.1/${MARIADB_CONNECTOR}.tar.gz -o ${MARIADB_CONNECTOR}.tar.gz
+    tar -xvzf ${MARIADB_CONNECTOR}.tar.gz && cd ${MARIADB_
