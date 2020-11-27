@@ -102,4 +102,15 @@ else
     # Instructions are copied and modified from: https://mariadb.com/docs/clients/mariadb-connectors/connector-cpp/install/
     MARIADB_CONNECTOR=mariadb-connector-cpp-1.0.1-$OSURL
     curl -Ls https://dlm.mariadb.com/$OSTAG/connectors/cpp/connector-cpp-1.0.1/${MARIADB_CONNECTOR}.tar.gz -o ${MARIADB_CONNECTOR}.tar.gz
-    tar -xvzf ${MARIADB_CONNECTOR}.tar.gz && cd ${MARIADB_
+    tar -xvzf ${MARIADB_CONNECTOR}.tar.gz && cd ${MARIADB_CONNECTOR}
+
+    SOURCE_INCLUDE_DIR="./include/mariadb"
+    SOURCE_LIB_DIR="lib/mariadb"
+    SOURCE_PLUGIN_DIR="lib/mariadb/plugin"
+fi 
+
+install -d /usr/include/mariadb/conncpp/compat
+install -d /usr/lib/mariadb/plugin
+
+#Header Files being copied into the necessary directories
+cp -R ${SOURCE_INCLUDE_DIR}/* /usr/include/ma
