@@ -113,4 +113,10 @@ install -d /usr/include/mariadb/conncpp/compat
 install -d /usr/lib/mariadb/plugin
 
 #Header Files being copied into the necessary directories
-cp -R ${SOURCE_INCLUDE_DIR}/* /usr/include/ma
+cp -R ${SOURCE_INCLUDE_DIR}/* /usr/include/mariadb/
+cp -R ${SOURCE_INCLUDE_DIR}/conncpp/* /usr/include/mariadb/conncpp
+cp -R ${SOURCE_INCLUDE_DIR}/conncpp/compat/* /usr/include/mariadb/conncpp/compat
+
+#Shared libraries copied into usr/lib
+cp ${SOURCE_LIB_DIR}/libmariadbcpp.so /usr/lib
+cp ${SOURCE_PLUGIN_DIR}/*.so /usr/lib/mariadb/plugin    
