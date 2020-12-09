@@ -15,4 +15,20 @@ fi
 
 # Cleanup temporary directory and associated files when exiting the script.
 cleanup() {
-    EXIT_CODE=$
+    EXIT_CODE=$?
+    set +e
+    if [[ -n "${TMP_DIR}" ]]; then
+        echo "Executing cleanup of tmp files"
+        rm -Rf "${TMP_DIR}"
+    fi
+    exit $EXIT_CODE
+}
+trap cleanup EXIT
+
+
+echo "Installing CMake..."
+apt-get -y purge --auto-remove cmake
+mkdir -p /opt/cmake
+
+architecture=$(dpkg --print-architecture)
+case "${architectu
