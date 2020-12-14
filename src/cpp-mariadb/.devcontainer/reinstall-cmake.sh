@@ -52,4 +52,7 @@ cd "${TMP_DIR}"
 curl -sSL "https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/${CMAKE_BINARY_NAME}" -O
 curl -sSL "https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/${CMAKE_CHECKSUM_NAME}" -O
 
-sha256sum -c --ignore
+sha256sum -c --ignore-missing "${CMAKE_CHECKSUM_NAME}"
+sh "${TMP_DIR}/${CMAKE_BINARY_NAME}" --prefix=/opt/cmake --skip-license
+
+ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
