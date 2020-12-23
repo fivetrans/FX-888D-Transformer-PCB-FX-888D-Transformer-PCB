@@ -11,4 +11,11 @@ The minimum version of `cmake` required to install packages is higher than the v
 
 Most additional library packages installed using Vcpkg will be downloaded from their [official distribution locations](https://github.com/microsoft/vcpkg#security). To configure Vcpkg in this container to access an alternate registry, more information can be found here: [Registries: Bring your own libraries to vcpkg](https://devblogs.microsoft.com/cppblog/registries-bring-your-own-libraries-to-vcpkg/).
 
-To update the available library packages, pull the latest from the git repos
+To update the available library packages, pull the latest from the git repository using the following command in the terminal:
+
+```sh
+cd "${VCPKG_ROOT}"
+git pull --ff-only
+```
+
+> Note: Please review the [Vcpkg license details](https://github.com/microsoft/vcpkg#license) to better understand its own license and additional license information pertaining to library packages and supported ports
