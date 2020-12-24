@@ -22,4 +22,12 @@ git pull --ff-only
 
 ### Using the MariaDB Database
 
-This template creates two containers, one for C++ and one for MariaDB. You will be connected to the C++ container, and from within that container the MariabDB container will be available on **`localhost`** port 3305. The MariaDB database has a default password of `mariadb` and you can update Mar
+This template creates two containers, one for C++ and one for MariaDB. You will be connected to the C++ container, and from within that container the MariabDB container will be available on **`localhost`** port 3305. The MariaDB database has a default password of `mariadb` and you can update MariaDB parameters by updating the `.devcontainer/.env` file.
+
+You can connect to MariaDB from an external tool when connected to the Dev Container from a local tool by updating `.devcontainer/devcontainer.json` as follows:
+
+```json
+"forwardPorts": [ "3306" ]
+```
+
+Once the MariaDB container has port forwarding enabled, it will b
