@@ -18,4 +18,8 @@ cd "${VCPKG_ROOT}"
 git pull --ff-only
 ```
 
-> Note: Please review the [Vcpkg license details](https://github.com/microsoft/vcpkg#license) to better understand its own license and additional license information pertaining to library packages and supported ports
+> Note: Please review the [Vcpkg license details](https://github.com/microsoft/vcpkg#license) to better understand its own license and additional license information pertaining to library packages and supported ports.
+
+### Using the MariaDB Database
+
+This template creates two containers, one for C++ and one for MariaDB. You will be connected to the C++ container, and from within that container the MariabDB container will be available on **`localhost`** port 3305. The MariaDB database has a default password of `mariadb` and you can update Mar
