@@ -33,4 +33,14 @@ You can connect to MariaDB from an external tool when connected to the Dev Conta
 Once the MariaDB container has port forwarding enabled, it will be accessible from the Host machine at `localhost:3306`. The [MariaDB Documentation](https://mariadb.com/docs/) has:
 
 1. [An Installation Guide for MySQL](https://mariadb.com/kb/en/mysql-client/), a CLI tool to work with a MariaDB database.
-2. [Tips on populating data](https://mariadb.com/kb/en/how-to-quickly
+2. [Tips on populating data](https://mariadb.com/kb/en/how-to-quickly-insert-data-into-mariadb/) in the database. 
+
+If needed, you can use `postCreateCommand` to run commands after the container is created, by updating `.devcontainer/devcontainer.json` similar to what follows:
+
+```json
+"postCreateCommand": "g++ --version && git --version"
+```
+
+### Adding another service
+
+You can add other services to 
