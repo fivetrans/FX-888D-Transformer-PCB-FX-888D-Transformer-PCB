@@ -55,4 +55,7 @@ If needed, you can use `postCreateCommand` to run commands after the container i
 
 ### Adding another service
 
-You can add other services to your `docker-compose.yml` file [as described in Docker's documentation](https://docs.docker.com/compose/compose-file/#service-configuration-r
+You can add other services to your `docker-compose.yml` file [as described in Docker's documentation](https://docs.docker.com/compose/compose-file/#service-configuration-reference). However, if you want anything running in this service to be available in the container on localhost, or want to forward the service locally, be sure to add this line to the service config:
+
+```yaml
+# Runs the service on the same network as the database container, allows "f
