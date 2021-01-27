@@ -14,4 +14,10 @@
                 "bullseye",
                 "buster"
             ],
-            "defaul
+            "default": "bullseye"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}
