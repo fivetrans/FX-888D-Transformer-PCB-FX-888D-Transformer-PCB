@@ -5,4 +5,13 @@
     "description": "Simple Debian container with Git installed.",
     "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/debian",
     "publisher": "Dev Container Spec Maintainers",
-    "licenseURL": "https://github.com/d
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Debian version (use bullseye on local arm64/Apple Silicon):",
+            "proposals": [
+                "bullseye",
+                "buster"
+            ],
+            "defaul
