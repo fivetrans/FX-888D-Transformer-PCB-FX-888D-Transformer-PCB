@@ -7,4 +7,13 @@
 
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
-			"version": "$
+			"version": "${templateOption:dockerVersion}",
+			"enableNonRootDocker": "${templateOption:enableNonRootDocker}",
+			"moby": "${templateOption:moby}"
+		}
+	}
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands a
