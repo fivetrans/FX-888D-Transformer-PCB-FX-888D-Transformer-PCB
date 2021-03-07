@@ -6,4 +6,6 @@ In many cases, the best approach to solve this problem is by bind mounting the d
 
 This template's approach creates pure "child" containers by hosting its own instance of the docker daemon inside this container.  This is compared to the forementioned "docker-_outside-of_-docker" method (sometimes called docker-outside-of-docker) that bind mounts the host's docker socket, creating "sibling" containers to the current container.
 
-For this technique to work, the "Docker in Docke
+For this technique to work, the "Docker in Docker" Feature included in this template automatically forces the parent container to be run as `--privileged` and adds a `/usr/local/share/docker-init.sh` ENTRYPOINT script that, spawns the `dockerd` process.
+
+The included `.devcontainer.json` can be altered to work with other Debian/Ubuntu-based container images such as `node` or `python`. F
