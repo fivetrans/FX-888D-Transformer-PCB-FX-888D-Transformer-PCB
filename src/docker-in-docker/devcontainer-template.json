@@ -1,0 +1,5 @@
+{
+    "id": "docker-in-docker",
+    "version": "1.2.0",
+    "name": "Docker in Docker",
+    "description": "Create child containers _inside_ a con
