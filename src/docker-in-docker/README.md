@@ -23,4 +23,12 @@ This template's approach creates pure "child" containers by hosting its own inst
 
 For this technique to work, the "Docker in Docker" Feature included in this template automatically forces the parent container to be run as `--privileged` and adds a `/usr/local/share/docker-init.sh` ENTRYPOINT script that, spawns the `dockerd` process.
 
-The included `.devcontaine
+The included `.devcontainer.json` can be altered to work with other Debian/Ubuntu-based container images such as `node` or `python`. For example, to use `mcr.microsoft.com/devcontainers/javascript-node`, update the `image` proprty as follows:
+
+```json
+"image": "mcr.microsoft.com/devcontainers/javascript-node:18"
+```
+
+---
+
+_Note: This file
