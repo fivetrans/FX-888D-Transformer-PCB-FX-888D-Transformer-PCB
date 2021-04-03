@@ -16,4 +16,8 @@ The included `.devcontainer.json` can be altered to work with other Debian/Ubunt
 
 In some cases, you may want to be able to mount the local workspace folder into a container you create while running from inside the dev container (e.g. using `-v` from the Docker CLI). The issue is that, with "Docker from Docker", containers are always created on the host. So, when you bind mount a folder into any container, you'll need to use the **host**'s paths.
 
-In GitHub Codespaces, the workspace folder is **available in the same place on the host as it is in the container,** so you can bin
+In GitHub Codespaces, the workspace folder is **available in the same place on the host as it is in the container,** so you can bind workspace contents as you would normally.
+
+However, for Dev Container for most Dev Container spec supporting tools, this is typically not the case. A simple way to work around this is to put `${localWorkspaceFolder}` in an environment variable that you then use when doing bind mounts inside the container.
+
+Add the following to `.devcontainer
