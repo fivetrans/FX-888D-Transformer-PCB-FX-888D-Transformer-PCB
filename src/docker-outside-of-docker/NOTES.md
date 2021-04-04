@@ -20,4 +20,14 @@ In GitHub Codespaces, the workspace folder is **available in the same place on t
 
 However, for Dev Container for most Dev Container spec supporting tools, this is typically not the case. A simple way to work around this is to put `${localWorkspaceFolder}` in an environment variable that you then use when doing bind mounts inside the container.
 
-Add the following to `.devcontainer
+Add the following to `.devcontainer.json`:
+
+```json
+"remoteEnv": { "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}" }
+```
+
+Then reference the env var when running Docker commands from the terminal inside the container.
+
+```bash
+docker run -it --rm -v "${LOCAL_WORKSPACE_FOLDER//\\/\/}:/workspace" debian bash
+```
