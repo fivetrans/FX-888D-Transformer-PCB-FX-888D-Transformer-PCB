@@ -38,4 +38,15 @@ However, for Dev Container for most Dev Container spec supporting tools, this is
 Add the following to `.devcontainer.json`:
 
 ```json
-"remo
+"remoteEnv": { "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}" }
+```
+
+Then reference the env var when running Docker commands from the terminal inside the container.
+
+```bash
+docker run -it --rm -v "${LOCAL_WORKSPACE_FOLDER//\\/\/}:/workspace" debian bash
+```
+
+---
+
+_Note: This file was auto-ge
