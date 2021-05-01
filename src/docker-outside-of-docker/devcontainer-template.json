@@ -26,4 +26,13 @@
             ],
             "default": "latest",
             "description": "Select or enter a Docker/Moby CLI version. (Availability can vary by OS version.)"
-   
+        },
+        "moby": {
+            "type": "boolean",
+            "default": "true",
+            "description": "Install OSS Moby build instead of Docker CE"
+        },
+        "enableNonRootDocker": {
+            "type": "boolean",
+            "description": "Enable non-root Docker access in container?",
+ 
