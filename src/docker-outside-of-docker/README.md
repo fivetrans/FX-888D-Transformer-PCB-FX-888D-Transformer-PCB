@@ -49,4 +49,4 @@ docker run -it --rm -v "${LOCAL_WORKSPACE_FOLDER//\\/\/}:/workspace" debian bash
 
 ---
 
-_Note: This file was auto-ge
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/src/docker-outside-of-docker/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
