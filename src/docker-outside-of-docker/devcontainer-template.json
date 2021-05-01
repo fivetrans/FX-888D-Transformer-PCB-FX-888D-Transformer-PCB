@@ -5,4 +5,13 @@
     "description": "Access your host's Docker install from inside a dev container. Installs Docker extension in the container along with needed CLIs.",
     "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/docker-outside-of-docker",
     "publisher": "Dev Container Spec Maintainers",
-    "licenseURL"
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "installZsh": {
+            "type": "boolean",
+            "description": "Install ZSH!?",
+            "default": "true"
+        },
+        "upgradePackages": {
+            "type": "boolean",
+            "description": "Upgra
