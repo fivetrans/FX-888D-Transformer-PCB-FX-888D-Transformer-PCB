@@ -1,4 +1,19 @@
 
+
+# Docker outside of Docker Compose (docker-outside-of-docker-compose)
+
+Access your host's Docker install from inside a container when using Docker Compose. Installs Docker extension in the container along with needed CLIs.
+
+## Options
+
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| installZsh | Install ZSH? | boolean | true |
+| upgradePackages | Upgrade OS packages? | boolean | false |
+| dockerVersion | Select or enter a Docker/Moby CLI version. (Availability can vary by OS version.) | string | latest |
+| moby | Install OSS Moby build instead of Docker CE | boolean | true |
+| enableNonRootDocker | Enable non-root Docker access in container? | boolean | true |
+
 ## Using the template
 
 Dev containers can be useful for all types of applications including those that also deploy into a container based-environment. While you can directly build and run the application inside the dev container you create, you may also want to test it by deploying a built container image into your local Docker Desktop instance without affecting your dev container.
@@ -42,3 +57,7 @@ By default, web frameworks and tools often only listen to localhost inside the c
 ```
 
 The `ports` property in `docker-compose.yml` [publishes](https://docs.docker.com/config/containers/container-networking/#published-ports) rather than forwards the port. This will not work in a cloud environment like Codespaces and applications need to listen to `*` or `0.0.0.0` for the application to be accessible externally. Fortunately the `forwardPorts` property does not have this limitation.
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/src/docker-outside-of-docker-compose/devcontainer-template.json).  Add additional notes to a `NOTES.md`._

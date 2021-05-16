@@ -1,0 +1,5 @@
+{
+    "id": "docker-outside-of-docker-compose",
+    "version": "2.2.0",
+    "name": "Docker outside of Docker Compose",
+    "description": "Access your host's Docker install from inside a container when using Docker Comp
