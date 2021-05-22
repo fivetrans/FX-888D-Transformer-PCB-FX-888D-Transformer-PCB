@@ -17,4 +17,14 @@
             "description": "Upgrade OS packages?",
             "default": "false"
         },
-        "dockerVe
+        "dockerVersion": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none",
+                "20.10"
+            ],
+            "default": "latest",
+            "description": "Select or enter a Docker/Moby CLI version. (Availability can vary by OS version.)"
+        },
+        "m
