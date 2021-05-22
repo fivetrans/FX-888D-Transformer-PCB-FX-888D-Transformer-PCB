@@ -6,4 +6,15 @@
     "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/docker-outside-of-docker-compose",
     "publisher": "Dev Container Spec Maintainers",
     "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
-    "op
+    "options": {
+        "installZsh": {
+            "type": "boolean",
+            "description": "Install ZSH?",
+            "default": "true"
+        },
+        "upgradePackages": {
+            "type": "boolean",
+            "description": "Upgrade OS packages?",
+            "default": "false"
+        },
+        "dockerVe
