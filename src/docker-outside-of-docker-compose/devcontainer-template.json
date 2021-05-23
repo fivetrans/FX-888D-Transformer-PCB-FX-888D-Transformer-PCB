@@ -35,4 +35,10 @@
         "enableNonRootDocker": {
             "type": "boolean",
             "description": "Enable non-root Docker access in container?",
-            "defa
+            "default": "true"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}
