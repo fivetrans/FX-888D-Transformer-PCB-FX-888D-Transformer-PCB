@@ -2,4 +2,10 @@
     "id": "dotnet",
     "version": "1.2.5",
     "name": "C# (.NET)",
-    "description": "Develop C# and .NET based applications. Includes all needed SDKs
+    "description": "Develop C# and .NET based applications. Includes all needed SDKs, extensions, and dependencies.",
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/dotnet",
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
