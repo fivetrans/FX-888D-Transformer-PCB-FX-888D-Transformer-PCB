@@ -19,4 +19,12 @@
                 "6.0-jammy",
                 "6.0-focal"
             ],
-   
+            "default": "7.0"
+        }
+    },
+    "platforms": [
+        ".NET",
+        ".NET Core",
+        "C#"
+    ]
+}
