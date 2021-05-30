@@ -1,2 +1,7 @@
 {
     "id": "dotnet-fsharp",
+    "version": "1.1.2",
+    "name": "F# (.NET)",
+    "description": "Develop F# and .NET based applications. Includes all needed SDKs, extensions, and dependencies.",
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/dotnet-fsharp",
+    "publisher": "Dev Container Spec 
