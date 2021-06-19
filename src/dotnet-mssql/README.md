@@ -22,4 +22,8 @@ The MS SQL container is deployed from the latest developer edition of Microsoft 
 
 #### Changing the sa password
 
-To change the `sa` user password, change the value in `.devcontainer/docker-compose.yml` and `.
+To change the `sa` user password, change the value in `.devcontainer/docker-compose.yml` and `.devcontainer/devcontainer.json`.
+
+#### Database deployment
+
+By default, a blank user database is created titled "ApplicationDB".  To add additional database objects or data through T-SQL during Codespace configuration, edit the file `.devcontainer/mssql/setup.sql` or place additional `.sql` files in the `.devcon
