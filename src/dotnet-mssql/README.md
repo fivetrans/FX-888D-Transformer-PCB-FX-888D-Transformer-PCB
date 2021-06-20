@@ -26,4 +26,6 @@ To change the `sa` user password, change the value in `.devcontainer/docker-comp
 
 #### Database deployment
 
-By default, a blank user database is created titled "ApplicationDB".  To add additional database objects or data through T-SQL during Codespace configuration, edit the file `.devcontainer/mssql/setup.sql` or place additional `.sql` files in the `.devcon
+By default, a blank user database is created titled "ApplicationDB".  To add additional database objects or data through T-SQL during Codespace configuration, edit the file `.devcontainer/mssql/setup.sql` or place additional `.sql` files in the `.devcontainer/mssql/` folder. *Large numbers of scripts may take a few minutes following container creation to complete, even when the SQL server is available the database(s) may not be available yet.*
+
+Alternatively, .dacpac files placed in the `./bin/Debug` folder will be published as databases in the container during Co
