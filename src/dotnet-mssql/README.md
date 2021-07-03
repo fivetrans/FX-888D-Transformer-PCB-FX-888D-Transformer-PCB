@@ -57,4 +57,17 @@ To enable HTTPS in ASP.NET, you can export a copy of your local dev certificate.
     dotnet dev-certs https --trust; dotnet dev-certs https -ep "${HOME}/.aspnet/https/aspnetapp.pfx" -p "SecurePwdGoesHere"
     ```
 
-2. Add the following in to `.devcontainer/devcontainer.j
+2. Add the following in to `.devcontainer/devcontainer.json`:
+
+    ```json
+    "remoteEnv": {
+        "ASPNETCORE_Kestrel__Certificates__Default__Password": "SecurePwdGoesHere",
+        "ASPNETCORE_Kestrel__Certificates__Default__Path": "${containerEnv:HOME}/.aspnet/https/aspnetapp.pfx",
+    },
+    "portsAttributs": {
+        "5001": {
+            "protocol": "https"
+        }
+    }
+    ```
+    ...where `5001` is the HTTP
