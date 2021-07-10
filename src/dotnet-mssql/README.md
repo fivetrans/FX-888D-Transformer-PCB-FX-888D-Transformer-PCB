@@ -83,4 +83,10 @@ To enable HTTPS in ASP.NET, you can export a copy of your local dev certificate.
 
 ### Using the forwardPorts property
 
-By
+By default, web frameworks and tools often only listen to localhost inside the container. As a result, we recommend using the `forwardPorts` property to make these ports available locally.
+
+```json
+"forwardPorts": [9000]
+```
+
+The `ports` property in `docker-compose.yml` [publishes](https://doc
