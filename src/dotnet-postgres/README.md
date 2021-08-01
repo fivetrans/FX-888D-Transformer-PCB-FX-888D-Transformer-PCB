@@ -16,4 +16,8 @@ This template references an image that was [pre-built](https://containers.dev/im
 
 ## Using this template
 
-This template creates two containers, one for C# (.NET) and one for PostgreSQL. You will be connected to the .NET container, and from within that container the PostgreSQL container will be available on *
+This template creates two containers, one for C# (.NET) and one for PostgreSQL. You will be connected to the .NET container, and from within that container the PostgreSQL container will be available on **`localhost`** port 5432. By default, the `postgre` user password is `postgre`. 
+
+Default database parameters may be changed in `.devcontainer/docker-compose.yml` file if desired.
+
+You also can connect to PostgreSQL from an external tool when connected to the Dev Container from a local tool by updating `.devcontainer/devcontainer.json`
