@@ -48,4 +48,14 @@ To enable HTTPS in ASP.NET, you can export a copy of your local dev certificate.
 
     **Windows PowerShell**
 
-    ```power
+    ```powershell
+    dotnet dev-certs https --trust; dotnet dev-certs https -ep "$env:USERPROFILE/.aspnet/https/aspnetapp.pfx" -p "SecurePwdGoesHere"
+    ```
+
+    **macOS/Linux terminal**
+
+    ```powershell
+    dotnet dev-certs https --trust; dotnet dev-certs https -ep "${HOME}/.aspnet/https/aspnetapp.pfx" -p "SecurePwdGoesHere"
+    ```
+
+2. Add 
