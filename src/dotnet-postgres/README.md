@@ -79,4 +79,15 @@ To enable HTTPS in ASP.NET, you can export a copy of your local dev certificate.
     2. Copy `.aspnet/https/aspnetapp.pfx` from your local home (`/home/yournamehere`) or user profile (`C:\Users\yournamehere`) folder into your Dev Container. For example, you can drag the file into the root of the File Explorer when using VS Code.
     3. Move the file to the correct place in the container. For example, in VS Code start a terminal and run:
         ```bash
-        mkdir -p $HOME/.aspnet/https && mv aspnetapp.pfx $H
+        mkdir -p $HOME/.aspnet/https && mv aspnetapp.pfx $HOME/.aspnet/https
+        ```
+
+### Using the forwardPorts property
+
+By default, web frameworks and tools often only listen to localhost inside the container. As a result, we recommend using the `forwardPorts` property to make these ports available locally.
+
+```json
+"forwardPorts": [9000]
+```
+
+The `ports` proper
