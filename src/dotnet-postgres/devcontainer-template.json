@@ -24,4 +24,8 @@
     },
     "platforms": [
         ".NET",
-        ".NET Core"
+        ".NET Core",
+        "C#",
+        "PostgreSQL"
+    ]
+}
