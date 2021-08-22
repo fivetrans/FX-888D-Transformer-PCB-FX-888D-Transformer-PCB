@@ -1,4 +1,12 @@
 
 # Go (go)
 
-Develop Go based application
+Develop Go based applications. Includes appropriate runtime args, Go, common tools, extensions, and dependencies.
+
+## Options
+
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| imageVariant | Go version (use -bullseye variants on local arm64/Apple Silicon): | string | 1-bullseye |
+
+This template references an 
