@@ -36,4 +36,10 @@ Once the PostgreSQL container has port forwarding enabled, it will be accessible
 You can add other services to your `.devcontainer/docker-compose.yml` file [as described in Docker's documentation](https://docs.docker.com/compose/compose-file/#service-configuration-reference). However, if you want anything running in this service to be available in the container on localhost, or want to forward the service locally, be sure to add this line to the service config:
 
 ```yaml
-# Runs the service on the same network as the database contai
+# Runs the service on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+network_mode: service:[$SERVICENAME]
+```
+
+### Using the forwardPorts property
+
+By default, web frameworks and tools often only listen to localhost inside the container. As a result, we recommend using the `forwardPorts` property to make these ports avail
