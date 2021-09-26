@@ -52,4 +52,15 @@ The `ports` property in `docker-compose.yml` [publishes](https://docs.docker.com
 
 ### Installing Go Dependencies
 
-This template includes the popular [PostGres Driver Library for Go](github.com/lib/pq). This is the recommended driver for use with Go, as per [GoLang Documentation](https://golangdocs.com/golang-postgresql-exampl
+This template includes the popular [PostGres Driver Library for Go](github.com/lib/pq). This is the recommended driver for use with Go, as per [GoLang Documentation](https://golangdocs.com/golang-postgresql-example).
+
+If you wish to change this, you may add additional `RUN` commands in the [Go Dockerfile](.devcontainer/Dockerfile). For example:
+
+```yaml
+# This line can be modified to add any needed additional packages
+RUN go get -x <github-link-for-package>
+```
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-tem
