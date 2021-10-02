@@ -63,4 +63,4 @@ RUN go get -x <github-link-for-package>
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-tem
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/src/go-postgres/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
