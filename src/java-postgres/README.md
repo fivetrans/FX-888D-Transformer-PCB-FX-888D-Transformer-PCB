@@ -1,4 +1,17 @@
 
+
+# Java & PostgreSQL (java-postgres)
+
+Develop applications with Java and PostgreSQL. Includes a Java application container and PostgreSQL server.
+
+## Options
+
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| imageVariant | Java version (use -bullseye variants on local arm64/Apple Silicon): | string | 17 |
+| installMaven | Install Maven, a management tool for Java | boolean | false |
+| installGradle | Install Gradle, a build automation tool for multi-language software development | boolean | false |
+
 This template references an image that was [pre-built](https://containers.dev/implementors/reference/#prebuilding) to automatically include needed devcontainer.json metadata.
 
 * **Image**: mcr.microsoft.com/devcontainers/java ([source](https://github.com/devcontainers/images/tree/main/src/java))
@@ -45,3 +58,7 @@ By default, web frameworks and tools often only listen to localhost inside the c
 ```
 
 The `ports` property in `docker-compose.yml` [publishes](https://docs.docker.com/config/containers/container-networking/#published-ports) rather than forwards the port. This will not work in a cloud environment like Codespaces and applications need to listen to `*` or `0.0.0.0` for the application to be accessible externally. Fortunately the `forwardPorts` property does not have this limitation.
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/src/java-postgres/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
