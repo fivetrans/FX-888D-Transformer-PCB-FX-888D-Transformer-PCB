@@ -9,4 +9,13 @@
     "options": {
         "imageVariant": {
             "type": "string",
-            "desc
+            "description": "Java version (use -bullseye variants on local arm64/Apple Silicon):",
+            "proposals": [
+                "8",
+                "11",
+                "17",
+                "8-bullseye",
+                "11-bullseye",
+                "17-bullseye",
+                "8-buster",
+          
