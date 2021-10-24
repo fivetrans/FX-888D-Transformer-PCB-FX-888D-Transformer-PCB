@@ -2,4 +2,11 @@
     "id": "java-postgres",
     "version": "1.2.1",
     "name": "Java & PostgreSQL",
-    "description": "Develop applications with Java and PostgreSQL. Includes a Java application container and Pos
+    "description": "Develop applications with Java and PostgreSQL. Includes a Java application container and PostgreSQL server.",
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/java-postgres",
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "desc
