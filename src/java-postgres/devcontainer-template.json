@@ -18,4 +18,15 @@
                 "11-bullseye",
                 "17-bullseye",
                 "8-buster",
-          
+                "11-buster",
+                "17-buster"
+            ],
+            "default": "17"
+        },
+        "installMaven": {
+            "type": "boolean",
+            "description": "Install Maven, a management tool for Java",
+            "default": "false"
+        },
+        "installGradle": {
+            "type"
