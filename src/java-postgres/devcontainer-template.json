@@ -29,4 +29,12 @@
             "default": "false"
         },
         "installGradle": {
-            "type"
+            "type": "boolean",
+            "description": "Install Gradle, a build automation tool for multi-language software development",
+            "default": "false"
+        }
+    },
+    "platforms": [
+        "Java"
+    ]
+}
