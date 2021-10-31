@@ -12,4 +12,9 @@ Develop Node.js based applications. Includes Node.js, eslint, nvm, and yarn.
 This template references an image that was [pre-built](https://containers.dev/implementors/reference/#prebuilding) to automatically include needed devcontainer.json metadata.
 
 * **Image**: mcr.microsoft.com/devcontainers/javascript-node ([source](https://github.com/devcontainers/images/tree/main/src/javascript-node))
-* **Applies devcontainer.json contents from image**: Yes ([source](https://github.com/devcontainer
+* **Applies devcontainer.json contents from image**: Yes ([source](https://github.com/devcontainers/images/blob/main/src/javascript-node/.devcontainer/devcontainer.json))
+
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/src/javascript-node/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
