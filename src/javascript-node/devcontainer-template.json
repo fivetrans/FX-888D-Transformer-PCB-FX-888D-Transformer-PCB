@@ -5,4 +5,12 @@
     "description": "Develop Node.js based applications. Includes Node.js, eslint, nvm, and yarn.",
     "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/javascript-node",
     "publisher": "Dev Container Spec Maintainers",
-    "lic
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Node.js version (use -bullseye variants on local arm64/Apple Silicon):",
+            "proposals": [
+                "18",
+                "16",
+                "14"
