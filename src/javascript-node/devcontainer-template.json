@@ -13,4 +13,17 @@
             "proposals": [
                 "18",
                 "16",
-                "14"
+                "14",
+                "18-bullseye",
+                "16-bullseye",
+                "14-bullseye",
+                "18-buster",
+                "16-buster",
+                "14-buster"
+            ],
+            "default": "18"
+        }
+    },
+    "platforms": [
+        "Node.js",
+        "JavaScrip
