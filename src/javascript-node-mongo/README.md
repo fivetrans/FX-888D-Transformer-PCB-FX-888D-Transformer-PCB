@@ -16,4 +16,4 @@ This template references an image that was [pre-built](https://containers.dev/im
 
 ## Using this template
 
-This template creates two containers, one for Node.js and one for MongoDB. You will be connected
+This template creates two containers, one for Node.js and one for MongoDB. You will be connected to the Node.js container, and from within that container the MongoDB container will be available on on **`localhost`** port 27017 The MongoDB instance can be managed in VS Code via the automatically installed MongoDB extension. Database options can be configured in `.devcontainer/docker-compose.yml` and data is persisted in a volume called `mongo
