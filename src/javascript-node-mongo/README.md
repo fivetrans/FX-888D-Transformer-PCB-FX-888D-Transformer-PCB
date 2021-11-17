@@ -20,4 +20,12 @@ This template creates two containers, one for Node.js and one for MongoDB. You w
 
 It uses the `mcr.microsoft.com/devcontainers/javascript-node` image which includes `git`, `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development.
 
-You also can connect to MongoDB from an external tool when connected to the Dev Contaner from a lo
+You also can connect to MongoDB from an external tool when connected to the Dev Contaner from a local tool by updating `.devcontainer/devcontainer.json` as follows:
+
+```json
+"forwardPorts": [ "27017" ]
+```
+
+### Adding another service
+
+You can add other services to your `.devcontainer/docker-compose.yml` file [as described in Docker's documentaiton](https://docs.docker.com/compose/compose-file/#service-configu
