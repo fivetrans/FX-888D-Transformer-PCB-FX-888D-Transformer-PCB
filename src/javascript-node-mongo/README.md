@@ -31,4 +31,16 @@ You also can connect to MongoDB from an external tool when connected to the Dev 
 You can add other services to your `.devcontainer/docker-compose.yml` file [as described in Docker's documentaiton](https://docs.docker.com/compose/compose-file/#service-configuration-reference). However, if you want anything running in this service to be available in the container on localhost, or want to forward the service locally, be sure to add this line to the service config:
 
 ```yaml
-# Runs the service on the same network as the database container, allows "forwardPorts" in devcontainer.
+# Runs the service on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+network_mode: service:db
+```
+
+### Using the forwardPorts property
+
+By default, web frameworks and tools often only listen to localhost inside the container. As a result, we recommend using the `forwardPorts` property to make these ports available locally.
+
+```json
+"forwardPorts": [9000]
+```
+
+The `ports` property i
