@@ -24,4 +24,9 @@
             "default": "18"
         }
     },
-    "platforms": 
+    "platforms": [
+        "Node.js",
+        "JavaScript",
+        "Mongo DB"
+    ]
+}
