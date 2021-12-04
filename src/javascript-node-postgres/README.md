@@ -37,4 +37,10 @@ network_mode: service:db
 
 ### Using the forwardPorts property
 
-By default, 
+By default, web frameworks and tools often only listen to localhost inside the container. As a result, we recommend using the `forwardPorts` property to make these ports available locally.
+
+```json
+"forwardPorts": [9000]
+```
+
+The `ports` property in `docker-compose.yml` [publishes](https://docs.docker.com/config/containers/container-networking/#publis
