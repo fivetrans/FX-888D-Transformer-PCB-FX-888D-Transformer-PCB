@@ -20,4 +20,12 @@ This definition creates two containers, one for Node.js and one for PostgreSQL. 
 
 While the definition itself works unmodified, it uses the `mcr.microsoft.com/devcontainers/javascript-node` image which includes `git`, `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development.
 
-You also can connect to PostgreSQL from an external tool when connected to the Dev Contaner from a local tool  by updating `.devcontainer/devcontai
+You also can connect to PostgreSQL from an external tool when connected to the Dev Contaner from a local tool  by updating `.devcontainer/devcontainer.json` as follows:
+
+```json
+"forwardPorts": [ "5432" ]
+```
+
+### Adding another service
+
+You can add other services to your `docker-compose.yml` file [as described in Docker's documentaiton](https://docs.docker.com/compose/compose-file/#service-configuration-reference). However, if you want anything running in this service to be available in the cont
