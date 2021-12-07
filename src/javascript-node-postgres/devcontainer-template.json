@@ -7,4 +7,14 @@
     "publisher": "Dev Container Spec Maintainers",
     "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
     "options": {
-   
+        "imageVariant": {
+            "type": "string",
+            "description": "Node.js version (use -bullseye variants on local arm64/Apple Silicon):",
+            "proposals": [
+                "18",
+                "16",
+                "14",
+                "18-bullseye",
+                "16-bullseye",
+                "14-bullseye",
+               
