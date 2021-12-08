@@ -2,4 +2,10 @@
     "id": "jekyll",
     "version": "1.1.4",
     "name": "Jekyll",
-    "description": "Develop static sites w
+    "description": "Develop static sites with Jekyll, includes everything you need to get up and running.",
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/jekyll",
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+     
