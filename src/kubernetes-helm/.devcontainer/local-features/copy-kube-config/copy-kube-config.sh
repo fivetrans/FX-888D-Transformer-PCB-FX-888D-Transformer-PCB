@@ -14,4 +14,8 @@ if [ "$SYNC_LOCALHOST_KUBECONFIG" = "true" ] && [ -d "/usr/local/share/kube-loca
         mkdir -p $HOME/.minikube
         sudo cp -r /usr/local/share/minikube-localhost/ca.crt $HOME/.minikube
         # Location varies between versions of minikube
-        
+        if [ -f "/usr/local/share/minikube-localhost/client.crt" ]; then
+            sudo cp -r /usr/local/share/minikube-localhost/client.crt $HOME/.minikube
+            sudo cp -r /usr/local/share/minikube-localhost/client.key $HOME/.minikube
+        elif [ -f "/usr/local/share/minikube-localhost/profiles/minikube/client.crt" ]; then
+            s
