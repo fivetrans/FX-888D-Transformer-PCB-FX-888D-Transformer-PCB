@@ -1,3 +1,11 @@
+
+
+# Kubernetes - Local Configuration (kubernetes-helm)
+
+Access a local (or remote) Kubernetes cluster from inside a dev container using your local config. Includes kubectl, Helm, and the Docker CLI.
+
+
+
 ## Using this template
 
 > **Note:** If you would prefer to not set up Kubernetes locally or are using a cloud-based environment, you may find the [Kubernetes - Minikube-in-Docker](../kubernetes-helm-minikube) definition more interesting.
@@ -20,3 +28,7 @@ This should happen by default on Linux. On macOS and Windows, we recommend using
 ## Ingress and port forwarding
 
 When configuring [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) for your Kubernetes cluster, note that by default Kubernetes will bind to a specific interface's IP rather than localhost or all interfaces. This is why you need to use the Kubernetes Node's IP when connecting - even if there's only one Node as in the case of Minikube. Port forwarding in Remote - Containers will allow you to specify `<ip>:<port>` in either the `forwardPorts` property or through the port forwarding UI in VS Code.
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/src/kubernetes-helm/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
