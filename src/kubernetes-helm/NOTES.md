@@ -15,4 +15,8 @@ The included `.devcontainer.json` can be altered to work with other Debian/Ubunt
 
 While this definition works with Minikube in most cases, if you hit trouble, make sure that your `~/.kube/config` file and Minikube certs reference your host's IP rather than `127.0.0.1` or `localhost` (since `localhost` resolve to the container itself rather than your local machine where Minikube is running).
 
-This should happen by default on Linux. On macOS an
+This should happen by default on Linux. On macOS and Windows, we recommend using the Kuberntes install that comes with Docker Desktop instead of Minikube to avoid these kinds of issues.
+
+## Ingress and port forwarding
+
+When configuring [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) for your Kubernetes cluster, note that by def
