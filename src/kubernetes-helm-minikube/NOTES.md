@@ -13,4 +13,4 @@ The included `.devcontainer.json` can be altered to work with other Debian/Ubunt
 
 ## Ingress and port forwarding
 
-When configuring [Ingress](https://kubernetes.io/docs/concepts/service
+When configuring [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) for your Kubernetes cluster, note that by default Kubernetes will bind to a specific interface's IP rather than localhost or all interfaces. This is why you need to use the Kubernetes Node's IP when connecting - even if there's only one Node as in the case of Minikube.
