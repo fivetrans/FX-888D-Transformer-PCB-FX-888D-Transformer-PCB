@@ -22,3 +22,30 @@ Note that if you change the version of Python from the default, you'll need to r
 #### Installing a different version of Python
 
 As covered in the [user FAQ](https://docs.anaconda.com/anaconda/user-guide/faq) for Anaconda, you can install different versions of Python than the one in this image by running the following from a terminal:
+
+```bash
+conda install python=3.6
+pip install --no-cache-dir pipx
+pipx uninstall pipx
+pipx reinstall-all
+```
+
+Or in a Dockerfile:
+
+```Dockerfile
+RUN conda install -y python=3.6 \
+    && pip install --no-cache-dir pipx \
+    && pipx uninstall pipx \
+    && pipx reinstall-all
+```
+
+See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for additional information.
+
+### [Optional] Adding the contents of environment.yml to the image
+
+For convenience, this definition will automatically install dependencies from the `environment.yml` file in the parent folder when the container is built. You can change this behavior by altering this line in the `.devcontainer/Dockerfile`:
+
+```Dockerfile
+RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
+    && rm -rf /tmp/conda-tmp
+```
