@@ -31,4 +31,18 @@ As covered in the [user FAQ](https://docs.anaconda.com/anaconda/user-guide/faq) 
 
 ```bash
 conda install python=3.6
-pip
+pip install --no-cache-dir pipx
+pipx uninstall pipx
+pipx reinstall-all
+```
+
+Or in a Dockerfile:
+
+```Dockerfile
+RUN conda install -y python=3.6 \
+    && pip install --no-cache-dir pipx \
+    && pipx uninstall pipx \
+    && pipx reinstall-all
+```
+
+See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for additional in
