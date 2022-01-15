@@ -17,4 +17,10 @@ Access to the Anaconda repository is covered by the [Anaconda Terms of Service](
 
 #### Installing or updating Python utilities
 
-This container installs all Python development utilities using [pipx](https://pipxproject.github.io/pipx/) t
+This container installs all Python development utilities using [pipx](https://pipxproject.github.io/pipx/) to avoid impacting the global Python environment. You can use this same utility add additional utilities in an isolated environment. For example:
+
+```bash
+pipx install prospector
+```
+
+Note that if you change the version of Python from the default, you'll need to run a few commands to update the utilities and `pipx`. More on t
