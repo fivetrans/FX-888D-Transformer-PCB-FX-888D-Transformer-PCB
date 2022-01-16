@@ -50,3 +50,13 @@ See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for addit
 ### [Optional] Adding the contents of environment.yml to the image
 
 For convenience, this definition will automatically install dependencies from the `environment.yml` file in the parent folder when the container is built. You can change this behavior by altering this line in the `.devcontainer/Dockerfile`:
+
+```Dockerfile
+RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
+    && rm -rf /tmp/conda-tmp
+```
+
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/sr
