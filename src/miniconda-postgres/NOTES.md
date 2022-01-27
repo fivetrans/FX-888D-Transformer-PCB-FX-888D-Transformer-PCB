@@ -9,4 +9,12 @@ This template creates two containers, one for Miniconda and one for PostgreSQL. 
 
 While the template itself works unmodified, it uses the `mcr.microsoft.com/devcontainers/miniconda` image which includes `git`, a non-root `vscode` user with `sudo` access, and a set of common dependencies and Python tools for development.
 
-You also can connect to PostgreSQL from an external tool when connecting to the Dev Container from a local tool by updating `.devcontainer/devcontainer.json` as
+You also can connect to PostgreSQL from an external tool when connecting to the Dev Container from a local tool by updating `.devcontainer/devcontainer.json` as follows:
+
+```json
+"forwardPorts": [ "5432" ]
+```
+
+Once the PostgreSQL container has port forwarding enabled, it will be accessible from the Host machine at `localhost:5432`. The [PostgreSQL Documentation](https://www.postgresql.org/docs/14/index.html) has:
+
+1. [An Installation Guide for PSQL](https://
