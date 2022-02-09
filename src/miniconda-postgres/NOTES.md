@@ -44,4 +44,12 @@ By default, web frameworks and tools often only listen to localhost inside the c
 
 The `ports` property in `docker-compose.yml` [publishes](https://docs.docker.com/config/containers/container-networking/#published-ports) rather than forwards the port. This will not work in a cloud environment like Codespaces and applications need to listen to `*` or `0.0.0.0` for the application to be accessible externally. Fortunately the `forwardPorts` property does not have this limitation.
 
-#### Installing or updating 
+#### Installing or updating Python utilities
+
+This container installs all Python development utilities using [pipx](https://pipxproject.github.io/pipx/) to avoid impacting the global Python environment. You can use this same utility add additional utilities in an isolated environment. For example:
+
+```bash
+pipx install prospector
+```
+
+Note that if you change the v
