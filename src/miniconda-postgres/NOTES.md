@@ -52,4 +52,8 @@ This container installs all Python development utilities using [pipx](https://pi
 pipx install prospector
 ```
 
-Note that if you change the v
+Note that if you change the version of Python from the default, you'll need to run a few commands to update the utilities and `pipx`. More on that next.
+
+#### Installing a different version of Python
+
+As covered in the [user FAQ](https://docs.anaconda.com/anaconda/user-guide/faq) for Anaconda, you can install different versions of Python than the one in this ima
