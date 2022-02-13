@@ -56,4 +56,20 @@ Note that if you change the version of Python from the default, you'll need to r
 
 #### Installing a different version of Python
 
-As covered in the [user FAQ](https://docs.anaconda.com/anaconda/user-guide/faq) for Anaconda, you can install different versions of Python than the one in this ima
+As covered in the [user FAQ](https://docs.anaconda.com/anaconda/user-guide/faq) for Anaconda, you can install different versions of Python than the one in this image by running the following from a terminal:
+
+```bash
+conda install python=3.6
+pip install --no-cache-dir pipx
+pipx uninstall pipx
+pipx reinstall-all
+```
+
+Or in a Dockerfile:
+
+```Dockerfile
+RUN conda install -y python=3.6 \
+    && pip install --no-cache-dir pipx \
+    && pipx uninstall pipx \
+    && pipx reinstall-all
+```
