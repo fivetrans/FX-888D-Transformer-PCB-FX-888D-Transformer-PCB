@@ -73,3 +73,9 @@ RUN conda install -y python=3.6 \
     && pipx uninstall pipx \
     && pipx reinstall-all
 ```
+
+See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for additional information.
+
+### [Optional] Adding the contents of environment.yml to the image
+
+For convenience, this definition will automatically install dependencies from the `environment.yml` file in the parent folder when the container is built. You can change thi
