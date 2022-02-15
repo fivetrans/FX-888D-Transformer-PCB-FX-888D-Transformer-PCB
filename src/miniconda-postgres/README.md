@@ -1,3 +1,11 @@
+
+
+# Miniconda & PostgreSQL (Python 3) (miniconda-postgres)
+
+Develop Miniconda & PostgreSQL applications in Python 3. Installs dependencies from your environment.yml file and the Python extension.
+
+
+
 This template references an image that was [pre-built](https://containers.dev/implementors/reference/#prebuilding) to automatically include needed devcontainer.json metadata.
 
 * **Image**: mcr.microsoft.com/devcontainers/miniconda ([source](https://github.com/devcontainers/images/tree/main/src/miniconda))
@@ -71,16 +79,3 @@ Or in a Dockerfile:
 RUN conda install -y python=3.6 \
     && pip install --no-cache-dir pipx \
     && pipx uninstall pipx \
-    && pipx reinstall-all
-```
-
-See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for additional information.
-
-### [Optional] Adding the contents of environment.yml to the image
-
-For convenience, this definition will automatically install dependencies from the `environment.yml` file in the parent folder when the container is built. You can change this behavior by altering this line in the `.devcontainer/Dockerfile`:
-
-```Dockerfile
-RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
-    && rm -rf /tmp/conda-tmp
-```
