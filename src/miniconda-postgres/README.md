@@ -79,3 +79,20 @@ Or in a Dockerfile:
 RUN conda install -y python=3.6 \
     && pip install --no-cache-dir pipx \
     && pipx uninstall pipx \
+    && pipx reinstall-all
+```
+
+See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for additional information.
+
+### [Optional] Adding the contents of environment.yml to the image
+
+For convenience, this definition will automatically install dependencies from the `environment.yml` file in the parent folder when the container is built. You can change this behavior by altering this line in the `.devcontainer/Dockerfile`:
+
+```Dockerfile
+RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
+    && rm -rf /tmp/conda-tmp
+```
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/devcontainers/templates/blob/main/src/miniconda-postgres/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
