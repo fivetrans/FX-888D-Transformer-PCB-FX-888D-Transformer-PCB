@@ -22,3 +22,5 @@ If you want to wire in something directly from your source code into the `www` f
 ...or execute this from a terminal window once the container is up:
 
 ```bash
+sudo chmod a+x "$(pwd)" && sudo rm -rf /var/www/html && sudo ln -s "$(pwd)" /var/www/html
+```
