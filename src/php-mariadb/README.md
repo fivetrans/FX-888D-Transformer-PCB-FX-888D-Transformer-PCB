@@ -16,4 +16,6 @@ This template references an image that was [pre-built](https://containers.dev/im
 
 ## Using this template
 
-This template creates two containers, one for PHP and one for MariaDB. You will be connected to the PHP container, and from within that container the MariabDB container will be available on **`l
+This template creates two containers, one for PHP and one for MariaDB. You will be connected to the PHP container, and from within that container the MariabDB container will be available on **`localhost`** port 3305. The MariaDB database has a default password of `mariadb` and you can update MariaDB parameters by updating the `.devcontainer/docker-compose.yml` file.
+
+While the template itself works unmodified, it uses the `mcr.microsoft.com/devcontainers/php` image which includes `git`, a non-ro
