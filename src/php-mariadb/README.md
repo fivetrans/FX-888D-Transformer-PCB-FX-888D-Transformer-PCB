@@ -23,4 +23,10 @@ While the template itself works unmodified, it uses the `mcr.microsoft.com/devco
 You can connect to MariaDB from an external tool when connected to the Dev Container from a local tool by updating `.devcontainer/devcontainer.json` as follows:
 
 ```json
-"forwardPorts": [ "3306
+"forwardPorts": [ "3306" ]
+```
+
+Once the MariaDB container has port forwarding enabled, it will be accessible from the Host machine at `localhost:3306`. The [MariaDB Documentation](https://mariadb.com/docs/) has:
+
+1. [An Installation Guide for MySQL](https://mariadb.com/kb/en/mysql-client/), a CLI tool to work with a MariaDB database.
+2. [Tips on
