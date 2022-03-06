@@ -1,0 +1,10 @@
+
+{
+    "id": "php-mariadb",
+    "version": "1.2.2",
+    "name": "PHP & MariaDB",
+    "description": "Develop PHP applications with MariaDB (MySQL Compatible).",
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/php-mariadb",
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
