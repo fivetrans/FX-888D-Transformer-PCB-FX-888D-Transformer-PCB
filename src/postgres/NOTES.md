@@ -9,4 +9,12 @@ This template creates two containers, one for Python and one for PostgreSQL. You
 
 While the template itself works unmodified, it uses the `mcr.microsoft.com/devcontainers/python` image which includes `git`, a non-root `vscode` user with `sudo` access, and a set of common dependencies and Go tools for development.
 
-You also can connect to PostgreSQL from an external tool when connected to the Dev Contaner from a local tool by updating `.
+You also can connect to PostgreSQL from an external tool when connected to the Dev Contaner from a local tool by updating `.devcontainer/devcontainer.json` as follows:
+
+```json
+"forwardPorts": [ "5432" ]
+```
+
+Once the PostgreSQL container has port forwarding enabled, it will be accessible from the Host machine at `localhost:5432`. The [PostgreSQL Documentation](https://www.postgresql.org/docs/14/index.html) has:
+
+1. [An Installa
