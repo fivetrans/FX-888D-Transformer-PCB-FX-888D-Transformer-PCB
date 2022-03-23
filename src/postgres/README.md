@@ -26,4 +26,7 @@ You also can connect to PostgreSQL from an external tool when connected to the D
 "forwardPorts": [ "5432" ]
 ```
 
-Once the PostgreSQL container 
+Once the PostgreSQL container has port forwarding enabled, it will be accessible from the Host machine at `localhost:5432`. The [PostgreSQL Documentation](https://www.postgresql.org/docs/14/index.html) has:
+
+1. [An Installation Guide for PSQL](https://www.postgresql.org/docs/14/installation.html) a CLI tool to work with a PostgreSQL database.
+2. [Tips on populat
