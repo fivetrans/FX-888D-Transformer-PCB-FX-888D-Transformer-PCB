@@ -11,3 +11,15 @@
             "type": "string",
             "description": "Python version (use -bullseye variants on local arm64/Apple Silicon):",
             "proposals": [
+                "3",
+                "3.11",
+                "3.10",
+                "3.9",
+                "3.8",
+                "3.7",
+                "3.6",
+                "3-bullseye",
+                "3.11-bullseye",
+                "3.10-bullseye",
+                "3.9-bullseye",
+                "3.8-bull
