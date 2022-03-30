@@ -33,4 +33,10 @@
                 "3.7-buster",
                 "3.6-buster"
             ],
-            "default": "3.1
+            "default": "3.11"
+        }
+    },
+    "platforms": [
+        "Python"
+    ]
+}
