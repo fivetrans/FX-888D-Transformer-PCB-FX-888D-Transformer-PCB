@@ -18,4 +18,19 @@
                 "2.7",
                 "3-bullseye",
                 "3.1-bullseye",
-               
+                "3.0-bullseye",
+                "2-bullseye",
+                "2.7-bullseye",
+                "3-buster",
+                "3.1-buster",
+                "3.0-buster",
+                "2-buster",
+                "2.7-buster"
+            ],
+            "default": "3-bullseye"
+        }
+    },
+    "platforms": [
+        "Ruby"
+    ]
+}
