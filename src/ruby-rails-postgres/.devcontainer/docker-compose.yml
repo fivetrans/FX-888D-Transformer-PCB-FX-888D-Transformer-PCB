@@ -29,4 +29,14 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_PASSWORD: postgres
       # Your config/database.yml should use the user and password you set here,
-      # and host "d
+      # and host "db" (as that's the name of this service). You can use whatever
+      # database name you want. Use `bin/rails db:prepare` to create the database.
+      #
+      # Example:
+      #
+      #  development:
+      #    <<: *default
+      #    host: db
+      #    username: postgres
+      #    password: postgres
+ 
