@@ -1,0 +1,1 @@
+This template references an image that was [pre-built](https://containers.dev/implemento
