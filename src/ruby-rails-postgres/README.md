@@ -48,4 +48,14 @@ This container installs all Python development utilities using [pipx](https://pi
 pipx install prospector
 ```
 
-See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for additional info
+See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for additional information.
+
+### Using the forwardPorts property
+
+By default, web frameworks and tools often only listen to localhost inside the container. As a result, we recommend using the `forwardPorts` property to make these ports available locally.
+
+```json
+"forwardPorts": [9000]
+```
+
+The `ports` property in `docker-compose.yml` 
