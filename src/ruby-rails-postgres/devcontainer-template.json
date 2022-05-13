@@ -4,4 +4,11 @@
     "name": "Ruby on Rails & Postgres",
     "description": "Develop Ruby on Rails applications with Postgres. Includes a Rails application container and PostgreSQL server.",
     "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/ruby-rails-postgres",
-    "publisher": "Dev Contain
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Ruby version (use -bullseye variants on local arm64/Apple Silicon):",
+            "proposals": [
+         
