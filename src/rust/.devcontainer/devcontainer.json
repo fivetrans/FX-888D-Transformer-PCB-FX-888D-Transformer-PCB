@@ -26,4 +26,6 @@
 	// Configure tool-specific properties.
 	// "customizations": {},
 
-	// Uncomment to c
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
