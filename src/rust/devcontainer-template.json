@@ -2,4 +2,10 @@
     "id": "rust",
     "version": "1.1.4",
     "name": "Rust",
-    "description": "Develop Rust based applications. Includes appropriate runtime args and everythi
+    "description": "Develop Rust based applications. Includes appropriate runtime args and everything you need to get up and running.",
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/rust",
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "
