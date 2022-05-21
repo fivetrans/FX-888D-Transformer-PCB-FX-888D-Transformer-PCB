@@ -8,4 +8,16 @@
     "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
     "options": {
         "imageVariant": {
-            "type": "
+            "type": "string",
+            "description": "Debian OS version (use bullseye on local arm64/Apple Silicon):",
+            "proposals": [
+                "buster",
+                "bullseye"
+            ],
+            "default": "bullseye"
+        }
+    },
+    "platforms": [
+        "Rust"
+    ]
+}
