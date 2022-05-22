@@ -1,0 +1,9 @@
+version: '3.8'
+
+volumes:
+  postgres-data:
+
+services:
+  app:
+    build:
+      context: 
