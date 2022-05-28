@@ -6,4 +6,9 @@ Develop applications with Rust and PostgreSQL. Includes a Rust application conta
 ## Options
 
 | Options Id | Description | Type | Default Value |
-|-----|-----|-----|-
+|-----|-----|-----|-----|
+| imageVariant | Debian OS version (use bullseye on local arm64/Apple Silicon): | string | bullseye |
+
+This template references an image that was [pre-built](https://containers.dev/implementors/reference/#prebuilding) to automatically include needed devcontainer.json metadata.
+
+* **Image**: mcr.microsoft.com/devcont
