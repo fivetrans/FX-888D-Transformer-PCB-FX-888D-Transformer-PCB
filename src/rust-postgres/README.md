@@ -16,4 +16,4 @@ This template references an image that was [pre-built](https://containers.dev/im
 
 ## Using this template
 
-This template creates two containers, one for Rust and one for
+This template creates two containers, one for Rust and one for PostgreSQL. You will be connected to the Rust container, and from within that container the PostgreSQL container will be available on **`localhost`** port 5432. The default database is named `postgres` with a user of `postgres` whose password is `postgres`, and if desired this may be changed in `.devcontainer/.dev`. Data is stored in a volume
