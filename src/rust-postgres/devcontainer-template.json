@@ -9,4 +9,15 @@
     "options": {
         "imageVariant": {
             "type": "string",
-            "description": "Debian OS version (use bullseye on local arm6
+            "description": "Debian OS version (use bullseye on local arm64/Apple Silicon):",
+            "proposals": [
+                "buster",
+                "bullseye"
+            ],
+            "default": "bullseye"
+        }
+    },
+    "platforms": [
+        "Ruby"
+    ]
+}
