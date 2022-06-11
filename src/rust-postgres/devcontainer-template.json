@@ -3,4 +3,10 @@
     "version": "1.0.6",
     "name": "Rust & PostgreSQL",
     "description": "Develop applications with Rust and PostgreSQL. Includes a Rust application container and PostgreSQL server.",
-    "documentationURL": "https://github.com/devco
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/rust-postgres",
+    "publisher": "Dev Container Spec Maintainers",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Debian OS version (use bullseye on local arm6
