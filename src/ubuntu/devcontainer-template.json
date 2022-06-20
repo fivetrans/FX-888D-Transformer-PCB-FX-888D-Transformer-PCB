@@ -12,4 +12,13 @@
             "description": "Ubuntu version (use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon):",
             "proposals": [
                 "jammy",
- 
+                "focal",
+                "bionic"
+            ],
+            "default": "jammy"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}
