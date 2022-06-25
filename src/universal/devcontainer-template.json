@@ -13,4 +13,11 @@
         "TypeScript",
         "C++",
         "Java",
-      
+        "C#",
+        ".NET Core",
+        "PHP",
+        "Go",
+        "Ruby",
+        "Conda"
+    ]
+}
