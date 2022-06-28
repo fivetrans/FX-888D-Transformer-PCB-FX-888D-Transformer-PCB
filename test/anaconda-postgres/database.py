@@ -16,4 +16,11 @@ import psycopg2
 pg_user = os.getenv('POSTGRES_USER')
 assert pg_user is not None, "POSTGRES_USER environment variable not set"
 
-pg_pas
+pg_password = os.getenv('POSTGRES_PASSWORD')
+assert pg_password is not None, "POSTGRES_PASSWORD environment variable not set"
+
+pg_db = os.getenv('POSTGRES_DB')
+assert pg_db is not None, "POSTGRES_DB environment variable not set"
+
+pg_host = os.getenv('POSTGRES_HOST')
+assert pg_host is not None, "POSTGRES_HOST
