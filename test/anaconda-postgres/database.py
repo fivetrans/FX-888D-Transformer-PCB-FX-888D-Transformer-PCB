@@ -33,4 +33,17 @@ try:
         pg_password=pg_password
     ))
 except Exception:
-    print("Unable to connect to t
+    print("Unable to connect to the database")
+    traceback.print_exc()
+    sys.exit(1)
+
+
+# Execute a query
+try:
+    with conn.cursor() as cur:
+        cur.execute("""SELECT datname FROM pg_database LIMIT 1;""")
+        rows = cur.fetchone()
+
+    if len(rows)==1:
+        print("DATABASE CONNECTED")
+        print("One database in this database server is
