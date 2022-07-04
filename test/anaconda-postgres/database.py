@@ -23,4 +23,14 @@ pg_db = os.getenv('POSTGRES_DB')
 assert pg_db is not None, "POSTGRES_DB environment variable not set"
 
 pg_host = os.getenv('POSTGRES_HOST')
-assert pg_host is not None, "POSTGRES_HOST
+assert pg_host is not None, "POSTGRES_HOST environment variable not set"
+
+try:
+    conn = psycopg2.connect("dbname='{pg_db}' user='{pg_user}' host='{pg_host}' password='{pg_password}'".format(
+        pg_db=pg_db,
+        pg_user=pg_user,
+        pg_host=pg_host,
+        pg_password=pg_password
+    ))
+except Exception:
+    print("Unable to connect to t
