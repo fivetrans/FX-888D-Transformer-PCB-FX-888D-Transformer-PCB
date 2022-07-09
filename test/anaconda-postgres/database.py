@@ -46,4 +46,14 @@ try:
 
     if len(rows)==1:
         print("DATABASE CONNECTED")
-        print("One database in this database server is
+        print("One database in this database server is: {db_name}".format(
+            db_name=rows[0]
+        ))
+    else:
+        print("ERROR EXECUTING DATABASE QUERY")
+        print("Expected 1 record; Retrieved {num_rows}".format(num_rows=len(rows)))
+        sys.exit(1)
+except Exception:
+    print("ERROR EXECUTING DATABASE QUERY")
+    traceback.print_exc()
+    sy
