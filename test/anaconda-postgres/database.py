@@ -56,4 +56,6 @@ try:
 except Exception:
     print("ERROR EXECUTING DATABASE QUERY")
     traceback.print_exc()
-    sy
+    sys.exit(1)
+finally:
+    conn.close()
