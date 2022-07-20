@@ -17,4 +17,5 @@ check "test-project: plot.png created" test -f ./plot.png
 # Clean up
 rm plot.png
 
-# Report 
+# Report result
+reportResults
