@@ -20,4 +20,13 @@ if [ "$(dpkg --print-architecture)" = "amd64" ] || [[ ! "${VCPKG_UNSUPPORTED_ARM
     VCPKG_FORCE_SYSTEM_BINARIES=1 check "vcpkg-from-root" ${VCPKG_ROOT}/vcpkg --version
     VCPKG_FORCE_SYSTEM_BINARIES=1 check "vcpkg-from-bin" vcpkg --version
 fi 
-check "g++" 
+check "g++"  g++ -g main.cpp -o main.out
+rm main.out
+mkdir -p build
+cd build
+check "cmake" cmake ..
+cd ..
+rm -rf build
+
+## Report result
+reportResults
