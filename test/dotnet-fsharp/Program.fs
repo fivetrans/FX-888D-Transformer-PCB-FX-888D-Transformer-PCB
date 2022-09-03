@@ -5,4 +5,7 @@
 
 [<EntryPoint>]
 let main argv =
-    
+    let from = "F# Container"
+    let target = "Remote World"
+    printfn $"Hello {target} from the {from}!"
+    0 // return an integer exit code
