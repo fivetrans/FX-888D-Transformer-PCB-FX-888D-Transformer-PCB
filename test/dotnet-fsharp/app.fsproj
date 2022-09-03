@@ -5,4 +5,5 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.fs" />
-  </Ite
+  </ItemGroup>
+</Project>
