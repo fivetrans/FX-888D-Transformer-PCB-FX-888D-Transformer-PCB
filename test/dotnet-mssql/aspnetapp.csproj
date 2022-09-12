@@ -4,4 +4,6 @@
     <UserSecretsId>31051026529000467138</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Mic
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0" />
+  </ItemGroup>
+</Project>
