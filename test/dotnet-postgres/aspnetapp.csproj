@@ -3,4 +3,6 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Np
+    <PackageReference Include="Npgsql" Version="6.0.2" />
+  </ItemGroup>
+</Project>
