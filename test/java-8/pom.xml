@@ -48,4 +48,9 @@
                 <mainClass>com.mycompany.app.App</mainClass>
               </manifest>
             </archive>
-          </configura
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
