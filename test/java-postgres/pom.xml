@@ -50,4 +50,12 @@
           <configuration>
             <archive>
               <manifest>
-                <mainCla
+                <mainClass>com.mycompany.app.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
