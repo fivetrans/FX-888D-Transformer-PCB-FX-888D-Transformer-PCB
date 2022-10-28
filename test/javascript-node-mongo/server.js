@@ -16,4 +16,14 @@ const HOST = '0.0.0.0';
 
 (async function() {
 	// Use connect to mongo server
-	const client = new MongoClient(MONGO_URL, { useUnifie
+	const client = new MongoClient(MONGO_URL, { useUnifiedTopology: true });
+	await client.connect();
+	console.log('Connected successfully to Mongo DB');
+	const db = client.db(DB_NAME);
+	const testHitsCollection = db.collection('test-hits');
+
+	// App
+	const app = express();
+	app.get('/', async (req, res) => {
+		await testHitsCollection.insertOne({ date: new Date() });
+		const count 
