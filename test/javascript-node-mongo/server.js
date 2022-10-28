@@ -26,4 +26,15 @@ const HOST = '0.0.0.0';
 	const app = express();
 	app.get('/', async (req, res) => {
 		await testHitsCollection.insertOne({ date: new Date() });
-		const count 
+		const count = await testHitsCollection.countDocuments();
+		res.send('Hello remote world! ' + count + ' test record(s) found.');
+	});
+
+	app.listen(PORT, HOST);
+	console.log(`Running on http://${HOST}:${PORT}`);
+
+	// Used for automated testing
+	if(process.env.REGRESSION_TESTING === 'true') { process.exit(0); }
+})();
+
+
