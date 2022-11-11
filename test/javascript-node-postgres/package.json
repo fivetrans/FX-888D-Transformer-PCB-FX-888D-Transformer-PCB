@@ -1,0 +1,7 @@
+{
+	"name": "docker_web_app",
+	"version": "1.0.0",
+	"description": "Node.js + Postgres",
+	"author": "First Last <first.last@example.com>",
+	"main": "server.js",
+	"sc
