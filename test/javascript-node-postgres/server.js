@@ -19,4 +19,15 @@ const cn = {
 	password: 'postgres' // database password
 };
 const initOptions = {
-	promiseLib:
+	promiseLib: promise
+};
+
+(async function() {
+	const pgp = require('pg-promise')(initOptions);
+	const db = pgp(cn); // database instance;
+	const result = await db.one('SELECT current_database()');
+	
+	// Create express app
+	const app = express();
+	app.get('/', async (req, res) => {
+		res.send('Hello, remote world! Current database: ' + result.current_database);
