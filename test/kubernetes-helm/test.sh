@@ -11,4 +11,11 @@ export SYNC_LOCALHOST_KUBECONFIG=true
 exec bash 
 
 # Actual tests
-checkExtension "ms-azure
+checkExtension "ms-azuretools.vscode-docker"
+checkExtension "ms-kubernetes-tools.vscode-kubernetes-tools"
+check "docker-socket" ls -l /var/run/docker.sock 
+check "docker" docker ps -a
+check "kube-config-mount" ls -l /usr/local/share/kube-localhost
+check "kube-config" ls -l "$HOME/.kube"
+check "kubectl" kubectl version --client
+check "helm" helm ver
