@@ -31,3 +31,11 @@ const initOptions = {
 	const app = express();
 	app.get('/', async (req, res) => {
 		res.send('Hello, remote world! Current database: ' + result.current_database);
+	});
+	
+	app.listen(PORT, HOST);
+	console.log(`Running on http://${HOST}:${PORT}`);	
+
+	// Used for automated testing
+	if(process.env.REGRESSION_TESTING === 'true') { process.exit(0); }
+})();
