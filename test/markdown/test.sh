@@ -9,4 +9,8 @@ checkCommon
 # Actual tests
 checkExtension "yzhang.markdown-all-in-one"
 checkExtension "streetsidesoftware.code-spell-checker"
-checkExtension "d
+checkExtension "davidanson.vscode-markdownlint"
+checkExtension "shd101wyy.markdown-preview-enhanced"
+
+# Report result
+reportResults
