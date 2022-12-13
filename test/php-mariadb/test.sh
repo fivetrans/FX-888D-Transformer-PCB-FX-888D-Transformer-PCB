@@ -16,4 +16,8 @@ checkExtension "felixfbecker.php-intellisense"
 checkExtension "mrmlnc.vscode-apache"
 check "php" php --version
 check "apache2ctl" which apache2ctl
-sleep 15 # Sleep to be 
+sleep 15 # Sleep to be sure MariaDB is running.
+check "mariadb" mariadb -h localhost -P 3306 --protocol=tcp -u root --password=mariadb -D mariadb -Bse exit
+
+# Report result
+reportResults
