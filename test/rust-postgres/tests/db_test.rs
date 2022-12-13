@@ -12,4 +12,18 @@ fn getenv(name: &str) -> String {
         Ok(val) => val,
         Err(err) => panic!("Error {} {:?}", name, err),
     };
-   
+    assert!(!val.is_empty());
+    val
+}
+
+#[test]
+fn test_ping_database() {
+    let host = getenv("POSTGRES_HOSTNAME");
+    let port = getenv("POSTGRES_PORT");
+    let _ = TcpStream::connect(format!("{}:{}", host, port)).expect("Failed to connect");
+    println!("Ping database succeed");
+}
+
+#[test]
+fn test_connection_query_database() {
+    let h
