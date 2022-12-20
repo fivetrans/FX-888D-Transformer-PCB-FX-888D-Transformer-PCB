@@ -26,4 +26,11 @@ fn test_ping_database() {
 
 #[test]
 fn test_connection_query_database() {
-    let h
+    let host = getenv("POSTGRES_HOSTNAME");
+    let user = getenv("POSTGRES_USER");
+    let passwd = getenv("POSTGRES_PASSWORD");
+    let db = getenv("POSTGRES_DB");
+    let port = getenv("POSTGRES_PORT");
+    let conn_str = format!("postgresql://{}:{}@{}:{}/{}", user, passwd, host, port, db);
+
+    let mut conn = Client::connec
