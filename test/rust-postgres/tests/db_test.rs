@@ -33,4 +33,13 @@ fn test_connection_query_database() {
     let port = getenv("POSTGRES_PORT");
     let conn_str = format!("postgresql://{}:{}@{}:{}/{}", user, passwd, host, port, db);
 
-    let mut conn = Client::connec
+    let mut conn = Client::connect(&conn_str, NoTls).expect("Connection failed");
+
+    for row in conn
+        .query("select * from pg_database limit 1;", &[])
+        .expect("Data expected")
+    {
+        let val: String = row.get("datname");
+        println!("Database name = {}", val);
+    }
+}
