@@ -8,4 +8,12 @@ checkCommon
 
 # template specific tests
 checkExtension "dbaeumer.vscode-eslint"
-check "node
+check "node" node --version
+sudo rm -f yarn.lock
+check "yarn" yarn install
+sudo rm -f package-lock.json
+check "eslint" eslint --no-eslintrc -c .eslintrc.json src/server.ts
+check "typescript" npm run compile
+check "test-project" npm run test
+npm config delete prefix
+check "nvm" bash -c ". /usr/local/share/nvm/
