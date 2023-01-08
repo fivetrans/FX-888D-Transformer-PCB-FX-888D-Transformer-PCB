@@ -16,4 +16,9 @@ check "eslint" eslint --no-eslintrc -c .eslintrc.json src/server.ts
 check "typescript" npm run compile
 check "test-project" npm run test
 npm config delete prefix
-check "nvm" bash -c ". /usr/local/share/nvm/
+check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8"
+check "nvm-node" bash -c ". /usr/local/share/nvm/nvm.sh && node --version"
+sudo rm -rf node_modules out
+
+# Report result
+reportResults
