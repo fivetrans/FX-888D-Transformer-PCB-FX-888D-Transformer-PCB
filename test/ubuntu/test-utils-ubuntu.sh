@@ -32,4 +32,18 @@ checkMultiple() {
     echo -e "\n🧪 Testing $LABEL."
     shift; MINIMUMPASSED=$1
     shift; EXPRESSION="$1"
-    while 
+    while [ "$EXPRESSION" != "" ]; do
+        if $EXPRESSION; then ((PASSED++)); fi
+        shift; EXPRESSION=$1
+    done
+    if [ $PASSED -ge $MINIMUMPASSED ]; then
+        echo "✅ Passed!"
+        return 0
+    else
+        echoStderr "❌ $LABEL check failed."
+        FAILED+=("$LABEL")
+        return 1
+    fi
+}
+
+checkOSP
