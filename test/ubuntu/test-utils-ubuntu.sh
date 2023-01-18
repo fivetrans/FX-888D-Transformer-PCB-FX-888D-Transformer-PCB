@@ -46,4 +46,20 @@ checkMultiple() {
     fi
 }
 
-checkOSP
+checkOSPackages() {
+    LABEL=$1
+    shift
+    echo -e "\n🧪 Testing $LABEL"
+    if dpkg-query --show -f='${Package}: ${Version}\n' "$@"; then 
+        echo "✅  Passed!"
+        return 0
+    else
+        echoStderr "❌ $LABEL check failed."
+        FAILED+=("$LABEL")
+        return 1
+    fi
+}
+
+checkCommon()
+{
+    PACKAGE_LIST="a
