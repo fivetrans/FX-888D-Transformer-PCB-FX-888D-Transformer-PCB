@@ -80,4 +80,13 @@ checkCommon()
         gnupg2 \
         libc6 \
         libgcc1 \
-        libg
+        libgssapi-krb5-2 \
+        liblttng-ust1 \
+        libstdc++6 \
+        zlib1g \
+        locales \
+        sudo"
+
+    # Actual tests
+    checkOSPackages "common-os-packages" ${PACKAGE_LIST}
+    checkMultiple "vscode-server" 1 "[ -d $HOME/.vscode-server/bin ]" "[ -d $HOME/.vscode-server-insiders/bin ]" "[ -d $HOME/.vscode-test-server/bin ]" "[ -d
