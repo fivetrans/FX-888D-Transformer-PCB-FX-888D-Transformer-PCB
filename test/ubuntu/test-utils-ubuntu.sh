@@ -62,4 +62,22 @@ checkOSPackages() {
 
 checkCommon()
 {
-    PACKAGE_LIST="a
+    PACKAGE_LIST="apt-utils \
+        git \
+        openssh-client \
+        less \
+        iproute2 \
+        procps \
+        curl \
+        wget \
+        unzip \
+        nano \
+        jq \
+        lsb-release \
+        ca-certificates \
+        apt-transport-https \
+        dialog \
+        gnupg2 \
+        libc6 \
+        libgcc1 \
+        libg
