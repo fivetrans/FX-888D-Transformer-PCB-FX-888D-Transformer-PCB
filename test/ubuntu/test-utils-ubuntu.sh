@@ -95,4 +95,18 @@ checkCommon()
     check "sudo" sudo echo "sudo works."
     check "zsh" zsh --version
     check "oh-my-zsh" [ -d "$HOME/.oh-my-zsh" ]
-    check "login-shell-path" [ -f "/etc/profile.d/00-restore-env.
+    check "login-shell-path" [ -f "/etc/profile.d/00-restore-env.sh" ]
+    check "code" which code
+}
+
+reportResults() {
+    if [ ${#FAILED[@]} -ne 0 ]; then
+        echoStderr -e "\n💥  Failed tests: ${FAILED[@]}"
+        exit 1
+    else 
+        echo -e "\n💯  All passed!"
+        exit 0
+    fi
+}
+
+# Useful for scenarios where UID/GID is not automatically updated - happen
