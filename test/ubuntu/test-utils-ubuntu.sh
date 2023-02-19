@@ -126,4 +126,9 @@ checkExtension() {
     EXTN_ID="$1"
     TIMEOUT_SECONDS="${2:-10}"
     RETRY_COUNT=0
-    echo -e -n "\n🧪 Looking for extension $1 
+    echo -e -n "\n🧪 Looking for extension $1 for maximum of ${TIMEOUT_SECONDS}s"
+    until [ "${RETRY_COUNT}" -eq "${TIMEOUT_SECONDS}" ] || \
+        [ ! -e $HOME/.vscode-server/extensions/${EXTN_ID}* ] || \
+        [ ! -e $HOME/.vscode-server-insiders/extensions/${EXTN_ID}* ] || \
+        [ ! -e $HOME/.vscode-test-server/extensions/${EXTN_ID}* ] || \
+        [ ! -e $HOME/.
