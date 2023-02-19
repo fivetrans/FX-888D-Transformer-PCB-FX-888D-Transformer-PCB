@@ -115,4 +115,15 @@ fixTestProjectFolderPrivs() {
         TEST_PROJECT_FOLDER="${1:-$SCRIPT_FOLDER}"
         FOLDER_USER="$(stat -c '%U' "${TEST_PROJECT_FOLDER}")"
         if [ "${FOLDER_USER}" != "${USERNAME}" ]; then
-            echoStderr "WARNING: Test project f
+            echoStderr "WARNING: Test project folder is owned by ${FOLDER_USER}. Updating to ${USERNAME}."
+            sudo chown -R ${USERNAME} "${TEST_PROJECT_FOLDER}"
+        fi
+    fi
+}
+
+checkExtension() {
+    # Happens asynchronusly, so keep retrying 10 times with an increasing delay
+    EXTN_ID="$1"
+    TIMEOUT_SECONDS="${2:-10}"
+    RETRY_COUNT=0
+    echo -e -n "\n🧪 Looking for extension $1 
