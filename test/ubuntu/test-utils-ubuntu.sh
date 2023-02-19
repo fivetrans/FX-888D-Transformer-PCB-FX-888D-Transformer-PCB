@@ -109,4 +109,10 @@ reportResults() {
     fi
 }
 
-# Useful for scenarios where UID/GID is not automatically updated - happen
+# Useful for scenarios where UID/GID is not automatically updated - happens in GitHub Actions w/Docker Compose
+fixTestProjectFolderPrivs() {
+    if [ "${USERNAME}" != "root" ]; then
+        TEST_PROJECT_FOLDER="${1:-$SCRIPT_FOLDER}"
+        FOLDER_USER="$(stat -c '%U' "${TEST_PROJECT_FOLDER}")"
+        if [ "${FOLDER_USER}" != "${USERNAME}" ]; then
+            echoStderr "WARNING: Test project f
