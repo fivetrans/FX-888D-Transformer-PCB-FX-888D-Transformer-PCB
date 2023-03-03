@@ -131,4 +131,19 @@ checkExtension() {
         [ ! -e $HOME/.vscode-server/extensions/${EXTN_ID}* ] || \
         [ ! -e $HOME/.vscode-server-insiders/extensions/${EXTN_ID}* ] || \
         [ ! -e $HOME/.vscode-test-server/extensions/${EXTN_ID}* ] || \
-        [ ! -e $HOME/.
+        [ ! -e $HOME/.vscode-remote/extensions/${EXTN_ID}* ]
+    do
+        sleep 1s
+        (( RETRY_COUNT++ ))
+        echo -n "."
+    done
+
+    if [ ${RETRY_COUNT} -lt ${TIMEOUT_SECONDS} ]; then
+        echo -e "\n✅ Passed!"
+        return 0
+    else
+        echoStderr -e "\n❌ Extension $EXTN_ID not found."
+        FAILED+=("$LABEL")
+        return 1
+    fi
+}
