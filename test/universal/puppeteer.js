@@ -13,4 +13,12 @@ const { exit } = require('process');
 
     await browser.close();
 
-    if(fs.existsSync('example.
+    if(fs.existsSync('example.png')) {
+        console.log('example.png found')
+        exit(0);
+    } else {
+        console.error('example.png not found!');
+        exit(1);
+    }
+
+})();
